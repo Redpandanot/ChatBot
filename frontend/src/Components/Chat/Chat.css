@@ -1,0 +1,209 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif; /* Use a modern font */
+    background-color: #f4f4f4; /* Light background */
+  }
+  
+  .chat-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #fff; /* White chat area */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+  }
+  
+  .message {
+    width: 700px;
+    margin-bottom: 0.8rem; /* Increased margin */
+    padding: 1rem; /* Increased padding */
+    border-radius: 12px; /* More rounded corners */
+    clear: both;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+  }
+  
+  .message.user {
+    background-color: #e6f2ff; /* Softer blue for user */
+    float: right;
+  }
+  
+  .message.model {
+    background-color: #fff; /* White for model */
+    float: left;
+  }
+  
+  .message-role {
+    font-weight: 600; /* Slightly less bold */
+    color: #777; /* Subdued color */
+    margin-right: 0.6rem;
+  }
+  
+  .input-form {
+    display: flex;
+    padding: 1rem;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-form textarea { /* Style the textarea */
+    flex-grow: 1;
+    padding: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    margin-right: 0.6rem;
+    font-size: 1rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease;
+    resize: none; /* Prevent user from resizing textarea */
+    min-height: 48px;
+    max-height: 70px; /* Set a maximum height, adjust as needed */
+  }
+
+  .input-form textarea:focus {
+    border-color: #4285f4;
+    outline: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input-form button {
+    padding: 0.9rem 1.4rem; /* Adjusted padding */
+    background-color: #4285f4; /* Google blue button */
+    color: white;
+    border: none;
+    border-radius: 12px; /* More rounded button */
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500; /* Slightly less bold */
+    transition: background-color 0.2s ease; /* Smooth background transition */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Button shadow */
+  }
+  
+  .input-form button:hover {
+    background-color: #357ae8; /* Darker blue on hover */
+  }
+  
+  .input-form button:focus {
+    outline: none; /* Remove default outline */
+  }
+
+.message .message-actions { /* Container for buttons */
+  display: flex;
+  gap: 0.5rem; /* Space between buttons */
+  margin-top: 0.5rem; /* Space above buttons */
+  margin-bottom: 0.5rem;
+}
+
+.message .message-actions button {
+  padding: 0.5rem 1rem; /* Smaller padding */
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text */
+  border: none;
+  border-radius: 8px; /* Slightly less rounded */
+  cursor: pointer;
+  font-size: 0.85rem; /* Smaller font */
+  font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth transitions */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.message .message-actions button:hover {
+  background-color: #e0e0e0; /* Darker gray on hover */
+  transform: translateY(-1px); /* Move slightly up on hover */
+}
+
+.message .message-actions button:active {
+  background-color: #d0d0d0; /* Even darker gray on click */
+  transform: translateY(0); /* Reset transform on click */
+  box-shadow: none; /* Remove shadow on click */
+}
+
+.message .message-actions button:focus {
+  outline: none; /* Remove default outline */
+}
+
+/* Optional: Style buttons differently */
+.message .message-actions button.branch {
+  background-color: #dcfce7; /* Light green for branch */
+  color: #166534; /* Darker green text */
+}
+
+.message .message-actions button.branch:hover {
+  background-color: #c7fdb5; /* Darker green on hover */
+}
+
+.message .message-actions button.regenerate {
+  background-color: #fff0cc; /* Light yellow for regenerate */
+  color: #7a5206; /* Darker yellow text */
+}
+
+.message .message-actions button.regenerate:hover {
+  background-color: #ffe8ad; /* Darker yellow on hover */
+}
+
+.code-block {
+  position: relative; /* Needed for absolute positioning of button */
+}
+
+.copy-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #4CAF50; /* Example color */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px; /* Adjust as needed */
+  border-radius: 4px;
+}
+
+.input-form-edit {
+  display: flex; /* Use flexbox for easy layout */
+  flex-direction: column; /* Stack textarea and button vertically */
+  width: 700px; /* Adjust width as needed */
+  margin: 20px auto; /* Center the form horizontally */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 5px; /* Round the corners */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.input-form-edit textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  resize: vertical; /* Allow resizing only vertically */
+  font-family: sans-serif; /* Choose a suitable font */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-form-edit textarea:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a focus shadow */
+}
+
+.input-form-edit button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.input-form-edit button:hover {
+  background-color: #0069d9; /* Darker blue on hover */
+}
+
+.input-form-edit button:focus {
+  outline: none;
+}

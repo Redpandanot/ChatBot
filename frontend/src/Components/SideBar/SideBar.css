@@ -1,0 +1,60 @@
+.sidebar-container {
+  width: 230px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-list {
+  flex-grow: 1;
+  scrollbar-width: thin; /* or auto, or thin */
+  scrollbar-color: #a0a0a0 #f0f0f0; /* thumb color track color */
+}
+
+.chat-item {
+  padding: 10px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add "..." for truncated text */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.chat-item:hover {
+  background-color: #e8f0fe;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.chat-item.active {
+  background-color: #d0e3fa;
+}
+
+.chat-item .delete-button {
+  margin-left: auto;
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  transition: background-color 0.2s;
+}
+
+.chat-item .delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.chat-item .delete-button:active {
+  background-color: #c62828;
+}
+
+.chat-item .delete-button:focus {
+  outline: none;
+}
