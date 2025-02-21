@@ -95,7 +95,3 @@ I ❤️ contributions! Follow these steps to contribute:
 
 ## 🎤 Get in Touch
 💬 Have questions or feedback? Open an issue on GitHub!
-
-🚀 Happy Chatting!
-```
-
